@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-list {
+            counter-reset: custom-counter;
+            list-style-type: none;
+        }
+
+        .custom-list li::before {
+            content: counter(custom-counter) ".";
+            counter-increment: custom-counter;
+            margin-right: 0.5em;      
+        }
+   </style>
+</head>
+<body>
+    <ul class="custom-list">
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 7</li>
+        <li>List item 4</li>
+        <li>List item 5</li>
+        <li></li>
+      </ul>
+      
+</body>
+</html>
